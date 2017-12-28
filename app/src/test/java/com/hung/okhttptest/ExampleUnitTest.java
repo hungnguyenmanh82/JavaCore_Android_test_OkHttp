@@ -30,6 +30,9 @@ import static org.junit.Assert.*;
 /**
  *  guide all here:
  *  https://github.com/square/okhttp/wiki/Recipes
+ *
+ *  dung MockWebserver test rất tiện:
+ *   https://www.programcreek.com/java-api-examples/index.php?api=com.google.mockwebserver.MockWebServer
  */
 public class ExampleUnitTest {
 
@@ -554,7 +557,7 @@ public class ExampleUnitTest {
      * https://www.programcreek.com/java-api-examples/index.php?api=com.google.mockwebserver.MockWebServer
      */
     @Test
-    public void testMockServer() throws Exception {
+    public void test_MockWebserver() throws Exception {
         //=============================== start server ================================
         // use a proxy so we can manipulate the origin server's host name
         MockWebServer server = new MockWebServer();
