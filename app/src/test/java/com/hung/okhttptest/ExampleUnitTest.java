@@ -247,6 +247,10 @@ public class ExampleUnitTest {
         Headers responseHeaders = response.headers();
         Map<String, List<String>> map = responseHeaders.toMultimap();
 
+        System.out.println("======================== response header");
+        System.out.println(map.toString());
+        System.out.println("======================== response body");
+
         //header of response
         //System.out.print(headers.toString());
 
@@ -572,7 +576,7 @@ public class ExampleUnitTest {
         server.play();  //start server here
 
         // URL này ko capture với WireShark đc
-        System.out.println(server.getUrl("/")); //http://DESKTOP-LBOHS1J:49265
+        System.out.println(server.getUrl("/")); //http://DESKTOP-LBOHS1J:49265  => địa chi localhost
         //=================================== end server ========================
 
         // avoid creating several instances, should be singleon
@@ -611,7 +615,7 @@ public class ExampleUnitTest {
         System.out.print(body);
 
         // ===============================================
-        server.shutdown(); //stop server here
+//        server.shutdown(); //stop server here
 
         assertEquals(4, 2 + 2);
     }
